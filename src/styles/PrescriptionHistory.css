@@ -1,0 +1,302 @@
+/* ===========================
+   Prescription History
+=========================== */
+
+.history-container{
+    padding:20px;
+}
+
+.history-title{
+    text-align:center;
+    font-size:28px;
+    font-weight:700;
+    color:#2563eb;
+    margin-bottom:5px;
+}
+
+.history-subtitle{
+    text-align:center;
+    color:#64748b;
+    margin-bottom:25px;
+    font-size:16px;
+}
+
+/* ===========================
+   Search
+=========================== */
+
+.search-box{
+    width:100%;
+    padding:14px 18px;
+    border:1px solid #dbeafe;
+    border-radius:12px;
+    outline:none;
+    font-size:15px;
+    margin-bottom:25px;
+    transition:.25s;
+}
+
+.search-box:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}
+
+/* ===========================
+   Cards Grid
+=========================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fill,minmax(280px,1fr));
+
+    gap:18px;
+
+}
+
+/* ===========================
+   Patient Card
+=========================== */
+
+.patient-card-history{
+
+    background:#fff;
+
+    border-radius:16px;
+
+    padding:16px;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.25s;
+
+}
+
+.patient-card-history:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.12);
+
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.patient-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:15px;
+
+}
+
+.patient-header h3{
+
+    margin:0;
+
+    color:#1e3a8a;
+
+    font-size:21px;
+
+}
+
+.patient-header p{
+
+    margin-top:5px;
+
+    color:#64748b;
+
+    font-size:15px;
+
+}
+
+/* ===========================
+   RX Badge
+=========================== */
+
+.rx-id{
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   Patient Info
+=========================== */
+
+.patient-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:15px;
+
+    color:#475569;
+
+    font-size:14px;
+
+}
+
+/* ===========================
+   Diagnosis
+=========================== */
+
+.diagnosis-box{
+
+    background:#f8fafc;
+
+    border-radius:12px;
+
+    padding:14px;
+
+    margin-bottom:18px;
+
+}
+
+.diagnosis-box strong{
+
+    display:block;
+
+    color:#64748b;
+
+    margin-bottom:8px;
+
+}
+
+.diagnosis-box p{
+
+    margin:0;
+
+    font-size:15px;
+
+    color:#111827;
+
+    font-weight:500;
+
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.card-actions{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.view-btn,
+.delete-btn{
+
+    flex:1;
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:10px;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.view-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.view-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+.delete-btn{
+
+    background:#ef4444;
+
+    color:white;
+
+}
+
+.delete-btn:hover{
+
+    background:#dc2626;
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.history-container{
+
+padding:15px;
+
+}
+
+.history-title{
+
+font-size:24px;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.patient-info{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:8px;
+
+}
+
+.card-actions{
+
+flex-direction:column;
+
+}
+
+}

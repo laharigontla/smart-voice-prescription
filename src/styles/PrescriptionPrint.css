@@ -1,0 +1,382 @@
+/* ==========================================
+   Prescription Preview
+========================================== */
+
+.print-preview {
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* Always white */
+  background: #ffffff;
+  color: #222;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================================
+   Live Preview Header
+========================================== */
+
+.preview-live {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.eye {
+  font-size: 22px;
+  color: #2563eb;
+}
+
+.preview-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.live-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.preview-subtitle {
+  font-size: 14px;
+  color: #777;
+}
+
+/* ==========================================
+   Hospital Header
+========================================== */
+
+.hospital {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hospital h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #1976d2;
+}
+
+.hospital p {
+  margin-top: 8px;
+  font-size: 18px;
+  color: #666;
+}
+
+/* ==========================================
+   Divider
+========================================== */
+
+.divider {
+  margin: 12px 0;
+}
+
+/* ==========================================
+   Patient Information
+========================================== */
+
+.patient-section {
+  margin: 15px 0;
+}
+
+.section-heading {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.patient-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.info-card {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-card .label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.info-card .value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* ==========================================
+   Diagnosis / Advice
+========================================== */
+
+.section-title-print {
+  text-align: center;
+  font-size: 19px;
+  margin-bottom: 10px;
+  color: #2563eb !important;
+  font-weight: 700;
+}
+
+.print-text {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 8px 0;
+  color: #222;
+}
+
+/* ==========================================
+   Medicine Table
+========================================== */
+
+.print-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.print-table th {
+  background: #1976d2;
+  color: white;
+  padding: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.print-table td {
+  padding: 5px;
+  border: 1px solid #d1d5db;
+  text-align: center;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* Medicine column */
+.print-table th:first-child,
+.print-table td:first-child {
+  width: 28%;
+  text-align: left;
+  padding-left: 8px;
+}
+
+/* Timing & Days columns */
+.print-table th:nth-child(2),
+.print-table td:nth-child(2) {
+  width: 85px;   /* Food */
+}
+
+.print-table th:nth-child(3),
+.print-table td:nth-child(3),
+.print-table th:nth-child(4),
+.print-table td:nth-child(4),
+.print-table th:nth-child(5),
+.print-table td:nth-child(5),
+.print-table th:nth-child(6),
+.print-table td:nth-child(6) {
+  width: 40px;   /* M A E N */
+}
+
+.print-table th:nth-child(7),
+.print-table td:nth-child(7) {
+  width: 45px;   /* Days */
+}
+
+.empty-cell {
+  text-align: center;
+  padding: 12px;
+}
+
+/* ==========================================
+   Signature
+========================================== */
+
+.signature {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  font-size: 13px;
+}
+
+.date {
+  text-align: right;
+}
+
+/* ==========================================
+   Mobile Responsive
+========================================== */
+
+@media (max-width:768px){
+
+.print-preview{
+    width:100%;
+    max-width:100%;
+    padding:15px;
+    overflow:hidden;
+}
+
+.hospital h1{
+    font-size:24px;
+}
+
+.hospital p{
+    font-size:15px;
+}
+
+.patient-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+}
+
+.info-card{
+    padding:10px;
+}
+
+.info-card .label{
+    font-size:11px;
+}
+
+.info-card .value{
+    font-size:15px;
+}
+
+.print-table-wrapper{
+    width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+}
+
+.print-table{
+    min-width:420px;
+}
+
+.section-title-print{
+    font-size:22px;
+}
+
+.signature{
+    flex-direction:column;
+    gap:25px;
+}
+
+.date{
+    text-align:left;
+}
+
+}
+
+/* ==========================================
+   Print
+========================================== */
+
+@media print {
+
+  body * {
+    visibility: hidden;
+  }
+
+  #print-area,
+  #print-area * {
+    visibility: visible;
+  }
+
+  #print-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+    padding: 12px !important;
+
+    background: white !important;
+    color: black !important;
+
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    transform: scale(0.93);
+    transform-origin: top left;
+  }
+
+  .toolbar,
+  .left-panel,
+  .navbar {
+    display: none !important;
+  }
+
+  .right-panel {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 8mm;
+  }
+
+  .hospital h1 {
+  font-size: 30px !important;
+}
+
+.hospital p {
+  font-size: 16px !important;
+}
+
+.section-title-print,
+.section-heading {
+  margin-bottom: 6px !important;
+}
+
+.print-text {
+  margin: 5px 0 !important;
+}
+}
+
+
+.print-row{
+    display:flex;
+    align-items:flex-start;
+    margin:10px 0;
+    padding:4px 0;
+}
+
+.print-label{
+    width:170px;
+    font-weight:700;
+    color:#1976d2;
+    flex-shrink:0;
+}
+
+.print-label::after{
+    content:" :";
+}
+
+.print-value{
+    flex:1;
+    color:#222;
+    text-align:left;
+    white-space:pre-wrap;
+    word-break:break-word;
+}
