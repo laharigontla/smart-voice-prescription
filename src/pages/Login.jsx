@@ -64,7 +64,7 @@ function Login() {
           </div>
         </div>
 
-        <h1 className="login-title">Welcome back</h1>
+        <h1 className="login-title">Welcome</h1>
         <p className="login-subtitle">Sign in to continue to your dashboard</p>
 
         <form className="login-form" onSubmit={handleSubmit} noValidate>
