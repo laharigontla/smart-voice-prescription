@@ -60,8 +60,7 @@ function Login() {
         <div className="login-logo">
           <div className="logo">Rx</div>
           <div className="logo-text">
-            <h2>Voice Rx</h2>
-            <p>AI Voice Prescription Generator</p>
+            <h2>Prescription</h2>
           </div>
         </div>
 
@@ -117,7 +116,7 @@ function Login() {
         </form>
 
         <p className="login-footer">
-          🏥 Hospital · Smart Voice-Based Medical Prescription System
+          🏥 Hospital
         </p>
       </div>
     </div>
