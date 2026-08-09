@@ -58,14 +58,10 @@ function Login() {
     <div className="login-page">
       <div className="login-card">
         <div className="login-logo">
-          <div className="logo">Rx</div>
-          <div className="logo-text">
-            <h2>Prescription</h2>
-          </div>
         </div>
 
         <h1 className="login-title">Welcome</h1>
-        <p className="login-subtitle">Sign in to continue to your dashboard</p>
+        <p className="login-subtitle">Sign in to continue</p>
 
         <form className="login-form" onSubmit={handleSubmit} noValidate>
           <label className="login-label" htmlFor="username">
