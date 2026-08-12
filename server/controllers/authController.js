@@ -24,7 +24,7 @@ const register = async (req, res) => {
     }
 
     const existing = await User.findOne({
-      username: username.trim().toLowerCase(),
+      username: username.trim(),
     });
 
     if (existing) {
@@ -36,7 +36,7 @@ const register = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const user = new User({
-      username: username.trim().toLowerCase(),
+      username: username.trim(),
       password: hashedPassword,
       doctorName: doctorName || "",
     });
@@ -73,7 +73,7 @@ const login = async (req, res) => {
     }
 
     const user = await User.findOne({
-      username: username.trim().toLowerCase(),
+      username: username.trim(),
     });
 
     if (!user) {

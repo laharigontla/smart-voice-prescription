@@ -25,7 +25,7 @@ async function run() {
   console.log("Connected to MongoDB.");
 
   const existing = await User.findOne({
-    username: username.trim().toLowerCase(),
+    username: username.trim(),
   });
 
   if (existing) {
@@ -36,7 +36,7 @@ async function run() {
   const hashedPassword = await bcrypt.hash(password, 10);
 
   const user = new User({
-    username: username.trim().toLowerCase(),
+    username: username.trim(),
     password: hashedPassword,
     doctorName: doctorName || "",
   });

@@ -45,7 +45,7 @@ async function run() {
   console.log("Connected to MongoDB.");
 
   const user = await User.findOne({
-    username: currentUsername.trim().toLowerCase(),
+    username: currentUsername.trim(),
   });
 
   if (!user) {
@@ -54,7 +54,7 @@ async function run() {
   }
 
   if (newUsername) {
-    user.username = newUsername.trim().toLowerCase();
+    user.username = newUsername.trim();
   }
 
   if (newPassword) {
